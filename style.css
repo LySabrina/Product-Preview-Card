@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 1em;
+}
+
+main {
+  background-color: white;
+  width: 20em;
+  border-radius: 15px;
+}
+
+.img-container {
+  width: 100%;
+
+  border-radius: 15px 15px 0px 0px;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.info-container {
+  padding: 1em;
+  font-family: "Fraunces", serif;
+}
+
+.info-container > h1 {
+  margin: 5px 0px 5px 0px;
+}
+
+.type {
+  letter-spacing: 5px;
+}
+p {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  margin: 5px 0px 5px 0px;
+  line-height: 1.6;
+}
+
+.description {
+}
+.product-price {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 10px;
+  color: hsl(228, 12%, 48%);
+}
+
+.cart-button {
+  grid-row: 2;
+  grid-column: 1/4;
+  padding: 1em;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  background-color: hsl(158, 36%, 37%);
+  cursor: pointer;
+  text-align: center;
+}
+
+.cart-button img {
+  margin-right: 5px;
+}
+.cart-button:hover {
+  filter: brightness(85%);
+}
+
+.sale {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 25px;
+}
+.original {
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    display: flex;
+    width: 50em;
+    height: 35em;
+  }
+
+  .img-container {
+    height: 100%;
+    width: 50%;
+    border-radius: 15px 0px 0px 15px;
+  }
+  .product-image {
+    border-radius: 15px 0px 0px 15px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info-container {
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+  }
+
+  .info-container > h1 {
+    margin: 1em 0px 1em 0px;
+  }
+  p {
+    line-height: 2;
+    margin: 1em 0px 1em 0px;
+  }
+
+  .product-price {
+    margin: 3em 0px 3em 0px;
+  }
+}
